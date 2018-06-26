@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component, Fragment } from 'react';
 import Bubbles from '../Bubbles/Bubbles'
 
 class BubbleContainer extends Component {
   render() {
     return(
-      <div>
-       <Bubbles />
-      </div>
+      <Fragment>
+       <Bubbles fallSpeed={this.props.fallSpeed}/>
+      </Fragment>
     )
   }
 }
