@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Bubbles from '../Bubbles/Bubbles'
+import BubbleContainer from '../BubbleContainer/BubbleContainer'
 
 class Header extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class Header extends Component {
   }
 
   render() {
-    const { score, fallSpeed, restartGame, updateScore, updateSpeed } = this.props;
+    const { score, fallSpeed, restartGame, updateSpeed } = this.props;
     return(
       <header id="scoreAndSpeedWrapper" className="scoreAndSpeedWrapper">
         <section className="scoreRestartContainer">
@@ -28,4 +28,4 @@ class Header extends Component {
   }
 }
 
-export default(Header)
+export default Header;
