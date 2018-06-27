@@ -23,13 +23,10 @@ class App extends Component {
     })
   }
 
-  updateScore = (addedScore) => {
-    const scoreElem = document.getElementById("score");
-    let newScore = this.state.score += addedScore
+  updateScore = () => {
     this.setState({
-      score: newScore
+      score: this.state.score + 1
     })
-    scoreElem.textContent = this.state.score;
   }
 
   render() {
@@ -37,13 +34,13 @@ class App extends Component {
       <Fragment>
         <Header
           restartGame={this.restartGame}
-          updateSpeed={this.updateSpeed}
-          updateScore={this.updateScore}
           fallSpeed={this.state.fallSpeed}
           score={this.state.score}
+          updateSpeed={this.updateSpeed}
         />
         <BubbleContainer
-          fallSpeed={this.fallSpeed}
+          fallSpeed={this.state.fallSpeed}
+          updateScore={this.updateScore}
         />
       </Fragment>
     );

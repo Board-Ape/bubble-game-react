@@ -1,24 +1,19 @@
 import React,  { Component } from 'react';
 
 class Dot extends Component {
-
-  // dotClickHandler = function(e) {
-  //   (Math.floor(100/this.offsetHeight))
-  //   playArea.removeChild(this);
-  //   setTimeout(createDot, 1000);
-  // }
-
   render() {
-    const { diameter, x, y } = this.props
+    const { diameter, x, y, counter, dotClickHandler } = this.props
     return(
       <div className="dot"  style={{
-        width: diameter,
-        height: diameter,
-        left: `${x}%`,
-        top: `${y}%`
-      }}/>
+                              width: diameter,
+                              height: diameter,
+                              left: `${x}%`,
+                              top: `${y}%`
+                            }}
+        onClick={()=>this.props.dotClickHandler(counter)}
+      />
     )
   }
 }
 
-export default Dot
+export default Dot;
