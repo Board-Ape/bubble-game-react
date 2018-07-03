@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component } from 'react';
 import Dot from "../Dot/Dot";
 
 class BubbleContainer extends Component {
@@ -21,7 +21,7 @@ class BubbleContainer extends Component {
     const diameter = Math.random() * 50
     const dot = {
       diameter,
-      x: Math.random() * 100,
+      x: Math.random() * 96,
       y: 0,
       counter: this.state.counter
     }
